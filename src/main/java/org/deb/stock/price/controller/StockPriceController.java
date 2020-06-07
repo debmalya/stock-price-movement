@@ -29,7 +29,7 @@ public class StockPriceController {
     private StockPrice[] getPrice(List<String> allSymbols) {
            StockPrice[] prices = new StockPrice[allSymbols.size()];
            for (int i = 0; i < prices.length; i++){
-                  // TODO : Change to API Call
+                  // TODO : Change to real API Call to get the price
                   double price = ThreadLocalRandom.current().nextDouble(500);
                   StockPrice stockPrice = new StockPrice(allSymbols.get(i),price,LocalDateTime.now());
                   prices[i]=stockPrice;
