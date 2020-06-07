@@ -1,0 +1,24 @@
+{
+  "name": "stock-price",
+  "version": "1.0.0",
+  "description": "To display stock price change over time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debmalya/stock-price-movement.git"
+  },
+  "keywords": [
+    "Stock",
+    "price",
+    "movement"
+  ],
+  "author": "debmalya jash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debmalya/stock-price-movement/issues"
+  },
+  "homepage": "https://github.com/debmalya/stock-price-movement#readme"
+}
