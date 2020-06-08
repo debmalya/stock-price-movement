@@ -1,5 +1,7 @@
 package org.deb.stock.price.model;
 
+
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +13,9 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class StockPrice {
     private  String symbol;
-    private Double price;
+    private double price;
+    private String trend;
     private LocalDateTime time;
+
+
 }

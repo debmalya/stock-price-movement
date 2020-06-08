@@ -1,0 +1,30 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-table {
+  text-align: center;
+  justify-content:center;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.example-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+
+
+mat-cell{
+  display:flex !important;
+  justify-content:center!important;
+
+}
+
+mat-header-cell {
+  display:flex;
+  justify-content:center;
+}

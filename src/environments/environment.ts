@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  stockPriceURL: '/api/stock/price/v0/stream-sse/%5BD05:SGX,O39:SGX,U11:SGX%5D'
 };
 
 /*
