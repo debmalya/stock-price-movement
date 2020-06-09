@@ -19,37 +19,45 @@ export class PricedisplayComponent implements OnInit, OnDestroy {
 
   public stockPrices: StockPrice[] = [];
 
-  stockPriceDBS = new StockPrice();
+  // stockPriceDBS = new StockPrice();
 
 
-  // public dataSource = new MatTableDataSource<StockPrice>();
+  public dataSource = new MatTableDataSource<StockPrice>(this.stockPrices);
   sub: Subscription;
-// dataSource = stock
+  // dataSource = stock
 
 
-  constructor(private backendService: BackendService, private zone: NgZone) {
-      this.stockPriceDBS.price=1.007;
-      this.stockPriceDBS.symbol="DBS";
-      this.stockPriceDBS.trend="UP";
-      this.stockPrices.push(this.stockPriceDBS);
+  constructor(private backendService: BackendService, private zone: NgZone, private changeDetectorRefs: ChangeDetectorRef) {
+
+
   }
 
   ngOnInit(): void {
     this.sub = this.backendService._stockPricesWatch.subscribe(value => {
       if (value !== undefined && value !== null) {
-        // this.stockPrices = [].concat(value);
-        this.stockPrices = value;
-        // this.dataSource.data = this.stockPrices;
+        // console.log(JSON.stringify(value.values));
+        value.forEach((e)=>{
+          // JSON.parse(e.);
+          console.log(JSON.stringify(e))
+        });
+        this.dataSource.connect();
+        this.dataSource.data = this.stockPrices
+        // this.stockPrices = value;
+        // this.dataSource.data = value;
         // console.log("this.dataSource.data :" + JSON.stringify(this.dataSource.data));
-        console.log("this.stockPrices :" + JSON.stringify(this.stockPrices));
+        // console.log("this.stockPrices :" + JSON.stringify(this.dataSource.data));
+        // this.dataSource.connect();
+        this.changeDetectorRefs.detectChanges();
         // console.log("this.stockPrices.map :" + JSON.stringify(this.stockPrices.map));
         // console.log("this.stockPrices.entries :" + JSON.stringify(this.stockPrices.entries));
         // console.log("this.stockPrices.values :" + JSON.stringify(this.stockPrices.values));
       }
     });
+
   }
 
   ngOnDestroy(): void {
+    this.dataSource.disconnect();
     this.sub.unsubscribe();
   }
 
