@@ -3,9 +3,9 @@ import { Deserializable } from './deserializable';
 
 
 export class StockPrice implements Deserializable {
-   symbol: string;
-   price: Number;
-   trend: string;
+   public symbol: string;
+   public price: Number;
+   public trend: string;
   deserialize(input: any): this {
     Object.assign(this, input);
     return this;

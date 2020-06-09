@@ -38,7 +38,7 @@ public class StockPriceController {
 
   @GetMapping(value="/stream-sse/[{symbols}]")
   public Flux<ServerSentEvent<StockPrice[]>> streamEvents(@PathVariable List<String> symbols) {
-    return Flux.interval(Duration.ofSeconds(1))
+    return Flux.interval(Duration.ofSeconds(5))
       .map(e -> ServerSentEvent.<StockPrice[]> builder()
         .id(String.valueOf(e))
         .event("message")
