@@ -1,7 +1,3 @@
-import { Time } from '@angular/common';
-import { Deserializable } from './deserializable';
-
-
 export class StockPrice  {
    public symbol: string;
    public price: Number;

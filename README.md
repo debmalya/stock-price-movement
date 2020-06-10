@@ -11,6 +11,7 @@ stock price movement display
 * Observable
 * Observer
 * Subscription
+* Maven frontend plugin
 
 ## How to run it
 * mvn clean spring-boot:run
