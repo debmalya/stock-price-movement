@@ -10,7 +10,7 @@ stock price movement display
 * Angular
 
 ## How to run it
-* mvn spring-boot:run
+* mvn clean spring-boot:run
 * open browser http://localhost:5000/
 
 ## References
