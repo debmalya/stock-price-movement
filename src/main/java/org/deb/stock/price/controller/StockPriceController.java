@@ -20,11 +20,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @RequestMapping("/api/stock/price/v0")
 @Slf4j
 public class StockPriceController {
-
-
-  @Value("${retryCount:5}")
-  private int retryCount;
-
+  
   private ConcurrentHashMap<String, Double> priceMap = new ConcurrentHashMap<>();
 
 
