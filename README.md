@@ -6,8 +6,10 @@ stock price movement display
 * JDK >= 8
 ## Technologies
 * Spring ( Spring-boot, Webflux )
-* SSE ( Server Sent Event )
 * Angular
+* SSE ( Server Sent Event )
+* Observable
+* Observer
 
 ## How to run it
 * mvn clean spring-boot:run

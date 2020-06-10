@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 
+import java.text.DecimalFormat;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -25,6 +26,8 @@ import java.util.concurrent.ThreadLocalRandom;
 @RequestMapping("/api/stock/price/v0")
 @Slf4j
 public class StockPriceController {
+
+
   @Value("${retryCount:5}")
   private int retryCount;
 

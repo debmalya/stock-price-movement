@@ -16,13 +16,7 @@ export class BackendService {
 
   constructor(private zone: NgZone) {
     this.getStockPriceList().subscribe(data => {
-
-      console.log("Data :"+JSON.stringify(data));
       this.stockPrices = JSON.parse(JSON.stringify(data));
-      // Below line is working
-      // this.stockPrices.push(new StockPrice().deserialize(data));
-
-
       this.stockPricesWatch.next(this.stockPrices);
     }, error => console.log('Error: ' + error), () => console.log('done loading stock stream'));
   }
