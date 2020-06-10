@@ -70,10 +70,10 @@ stock price movement display
 ## Test code 
 I tried to check how does it work E2E with SSE. Now I will try to find tune and test coverage.
 ## References
-https://dzone.com/articles/tutorial-reactive-spring-boot-part-1-building-a-ko
-https://dzone.com/articles/tutorial-reactive-spring-boot-part-2-a-rest-client
-https://dzone.com/articles/tutorial-reactive-spring-boot-part-3-a-javafx-sprioo
-https://dzone.com/articles/tutorial-reactive-spring-boot-part-4-a-javafx-line
-https://dzone.com/articles/tutorial-reactive-spring-boot-part-5-auto-configur
-https://blog.logrocket.com/how-to-execute-a-function-with-a-web-worker-on-a-different-thread-in-angular/
+* https://dzone.com/articles/tutorial-reactive-spring-boot-part-1-building-a-ko
+* https://dzone.com/articles/tutorial-reactive-spring-boot-part-2-a-rest-client
+* https://dzone.com/articles/tutorial-reactive-spring-boot-part-3-a-javafx-sprioo
+* https://dzone.com/articles/tutorial-reactive-spring-boot-part-4-a-javafx-line
+* https://dzone.com/articles/tutorial-reactive-spring-boot-part-5-auto-configur
+* https://blog.logrocket.com/how-to-execute-a-function-with-a-web-worker-on-a-different-thread-in-angular/
 
