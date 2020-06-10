@@ -8,6 +8,7 @@ stock price movement display
 * Spring ( Spring-boot, Webflux )
 * Angular
 * SSE ( Server Sent Event )
+* Event stream.
 * Maven frontend plugin
 
 ## How to run it
@@ -15,6 +16,7 @@ stock price movement display
 * open browser http://localhost:5000/
 * Screen shot
 ![Cancel pending requests](./docs/ScreenShot.png)
+![Event stream](./docs/EventStream.png)
 ## About data
 This is not real data. All data are generated randomly . Price range is 50. Refresh interval is 1 second.
 ## Code Sample
