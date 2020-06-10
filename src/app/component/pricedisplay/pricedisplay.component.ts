@@ -38,19 +38,12 @@ export class PricedisplayComponent implements OnInit, OnDestroy {
         // console.log(JSON.stringify(value.values));
         value.forEach((e)=>{
           // JSON.parse(e.);
-          console.log(JSON.stringify(e))
+          console.log("Each :" + JSON.stringify(e))
         });
         this.dataSource.connect();
-        this.dataSource.data = this.stockPrices
-        // this.stockPrices = value;
-        // this.dataSource.data = value;
-        // console.log("this.dataSource.data :" + JSON.stringify(this.dataSource.data));
-        // console.log("this.stockPrices :" + JSON.stringify(this.dataSource.data));
-        // this.dataSource.connect();
+        this.stockPrices =value;
+        this.dataSource.data = this.stockPrices;
         this.changeDetectorRefs.detectChanges();
-        // console.log("this.stockPrices.map :" + JSON.stringify(this.stockPrices.map));
-        // console.log("this.stockPrices.entries :" + JSON.stringify(this.stockPrices.entries));
-        // console.log("this.stockPrices.values :" + JSON.stringify(this.stockPrices.values));
       }
     });
 

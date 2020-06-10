@@ -30,11 +30,6 @@ public class StockPriceController {
 
   private ConcurrentHashMap<String, Double> priceMap = new ConcurrentHashMap<>();
 
-  @GetMapping(value = "/[{symbols}]", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-  public Flux<StockPrice[]> price(@PathVariable List<String> symbols) {
-//    log.info("Priceless...");
-    return Flux.interval(Duration.ofSeconds(1)).map(e -> getPrice(symbols)).retry(retryCount);
-  }
 
   @GetMapping(value="/stream-sse/[{symbols}]")
   public Flux<ServerSentEvent<StockPrice[]>> streamEvents(@PathVariable List<String> symbols) {
