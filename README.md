@@ -8,9 +8,6 @@ stock price movement display
 * Spring ( Spring-boot, Webflux )
 * Angular
 * SSE ( Server Sent Event )
-* Observable
-* Observer
-* Subscription
 * Maven frontend plugin
 
 ## How to run it
