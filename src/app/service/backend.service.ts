@@ -42,8 +42,6 @@ export class BackendService {
         if (eventSource.readyState === 0) {
           eventSource.close();
           observer.complete();
-        } else {
-          observer.error('EventSource error: ' + error);
         }
       }
 

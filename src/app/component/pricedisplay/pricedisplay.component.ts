@@ -1,11 +1,9 @@
-import { Component, OnInit, ChangeDetectorRef, OnDestroy, NgZone } from '@angular/core';
+import { Component, OnInit, OnDestroy, NgZone } from '@angular/core';
 import { StockPrice } from 'src/app/model/stock-price';
 import { BackendService } from 'src/app/service/backend.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MatTableDataSource } from '@angular/material/table';
-import { cornsilk } from 'color-name';
-import { Subscription, Observable, BehaviorSubject } from 'rxjs';
-import { DataSource } from '@angular/cdk/table';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-pricedisplay',
@@ -15,7 +13,6 @@ import { DataSource } from '@angular/cdk/table';
 export class PricedisplayComponent implements OnInit, OnDestroy {
 
   displayedColumns: string[] = ['symbol', 'price', 'trend'];
-  // public dataSource = new MatTableDataSource<StockPrice>();
 
   public stockPrices: StockPrice[] = [];
 
@@ -25,7 +22,7 @@ export class PricedisplayComponent implements OnInit, OnDestroy {
 
 
 
-  constructor(private backendService: BackendService, private zone: NgZone, private changeDetectorRefs: ChangeDetectorRef) {
+  constructor(private backendService: BackendService, private zone: NgZone) {
 
 
   }
