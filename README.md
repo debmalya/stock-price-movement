@@ -15,6 +15,8 @@ stock price movement display
 * open browser http://localhost:5000/
 * Screen shot
 ![Cancel pending requests](./docs/ScreenShot.png)
+## About data
+This is not real data. All data are generated randomly . Price range is 50. Refresh interval is 1 second.
 ## Code Sample
 * Server Sent Event
 ```
@@ -52,23 +54,14 @@ stock price movement display
       }
 
 
-      eventSource.onopen = (event) => {
-        console.log("Opened event source :" + eventSource.readyState);
-      }
-
-      eventSource.close = () => {
-        console.log("Closed event source :" + +eventSource.readyState);
-      }
-
-
     });
   }
 ```
 
-## About data
-This is not real data. ALl data are generated randomly . Range is 50. Refresh interval is 1 second.
+
 ## Test code 
-I tried to check how does it work E2E with SSE. Now I will try to find tune and test coverage.
+Work in progress.
+
 ## References
 * https://dzone.com/articles/tutorial-reactive-spring-boot-part-1-building-a-ko
 * https://dzone.com/articles/tutorial-reactive-spring-boot-part-2-a-rest-client
