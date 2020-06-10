@@ -67,6 +67,8 @@ stock price movement display
   }
 ```
 
+## About data
+This is not real data. ALl data are generated randomly . Range is 50. Refresh interval is 1 second.
 ## Test code 
 I tried to check how does it work E2E with SSE. Now I will try to find tune and test coverage.
 ## References
